@@ -1,0 +1,277 @@
+<!-- <!DOCTYPE html>
+<html> -->
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caveat');
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TC-Bench: Benchmarking Temporal Compositionality in Text-to-Video and Image-to-Video Generation">
+  <meta name="keywords" content="Text-to-Video Generation, Image-to-Video Generation, Compositionality">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>TC-Bench</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">TC-Bench: Benchmarking Temporal Compositionality in Text-to-Video and Image-to-Video Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://weixi-feng.github.io/">Weixi Feng</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/jiachenli/">Jiachen Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://saxon.me/">Michael Saxon</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+              <a href="https://tsujuifu.github.io/">Tsu-jui Fu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wenhuchen.github.io/">Wenhu Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.cs.ucsb.edu/~william/">William Yang Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC Santa Barbara,</span>
+            <span class="author-block"><sup>2</sup>University of Waterloo</span>
+            <br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/weixi-feng/tc-bench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code & Data</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div style="text-align: center">
+  <img src="static/images/fig1.png" alt="" width="600px" style="max-width: 100%; height: auto;;" />
+<img src="static/images/fig2.png" alt="" width="800px" style="max-width: 100%; height: auto;;" />
+</div>
+
+<section>&nbsp;</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video generation has many unique challenges beyond those of image generation. 
+            The temporal dimension introduces extensive possible variations across frames, over which consistency and continuity may be violated. 
+            In this study, we move beyond evaluating simple actions and argue that generated videos should incorporate the emergence of new concepts and their relation transitions like in real-world videos as time progresses. 
+          </p>
+          <p>
+            To assess the <b>T</b>emporal <b>C</b>ompositionality of video generation models, we propose <b>TC-Bench</b>, a benchmark of meticulously crafted text prompts, corresponding ground truth videos, and robust evaluation metrics. 
+            The prompts articulate the initial and final states of scenes, effectively reducing ambiguities for frame development and simplifying the assessment of transition completion. 
+            In addition, by collecting aligned real-world videos corresponding to the prompts, we expand TC-Bench's applicability from text-conditional models to image-conditional ones that can perform generative frame interpolation. 
+          </p>
+          <p>
+            We also develop new metrics to measure the completeness of component transitions in generated videos, which demonstrate significantly higher correlations with human judgments than existing metrics. 
+            Our comprehensive experimental results reveal that most video generators achieve less than 20% of the compositional changes, highlighting enormous space for future improvement. 
+            Our analysis indicates that current video generation models struggle to interpret descriptions of compositional changes and dynamically map varied semantics across different time steps.  
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section"></section>
+<div class="columns is-centered has-text-centered">
+<h2 class="title is-3">Attribute Transition</h2>
+</div>
+<div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+  <div>
+    <img src="static/images/t2v_attribute.png" alt="" width="600px" style="max-width: 100%; height: auto;;" />
+    <p>Text-to-Video Generation</p>
+  </div>
+  <div>
+    <img src="static/images/i2v_attribute.png" alt="" width="800px" style="max-width: 100%; height: auto;;" />
+    <p>Image-to-Video Generation (Generative Frame interpolation)</p>
+  </div>
+</div>
+
+<section class="section"></section>
+<div class="columns is-centered has-text-centered">
+  <h2 class="title is-3">Object Relation Change</h2>
+  </div>
+  <div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+    <div>
+      <img src="static/images/t2v_object.png" alt="" width="600px" style="max-width: 100%; height: auto;;" />
+      <p>Text-to-Video Generation</p>
+    </div>
+    <div>
+      <img src="static/images/i2v_object.png" alt="" width="800px" style="max-width: 100%; height: auto;;" />
+      <p>Image-to-Video Generation (Generative Frame interpolation)</p>
+    </div>
+  </div>
+</div>
+
+<section class="section"></section>
+<div class="columns is-centered has-text-centered">
+  <h2 class="title is-3">Background Shifts</h2>
+  </div>
+  <div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+    <div>
+      <img src="static/images/t2v_background.png" alt="" width="600px" style="max-width: 100%; height: auto;;" />
+      <p>Text-to-Video Generation</p>
+    </div>
+    <div>
+      <img src="static/images/i2v_background.png" alt="" width="800px" style="max-width: 100%; height: auto;;" />
+      <p>Image-to-Video Generation (Generative Frame interpolation)</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{feng2023layoutgpt,
+  title={LayoutGPT: Compositional Visual Planning and Generation with Large Language Models},
+  author={Feng, Weixi and Zhu, Wanrong and Fu, Tsu-jui and Jampani, Varun and Akula, Arjun and He, Xuehai and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
+  journal={arXiv preprint arXiv:2305.15393},
+  year={2023}
+}
+</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/draft.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/weixi-feng/tc-bench" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
