@@ -47,6 +47,35 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      bulmaCarousel.attach('#results-carousel', {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        navigation: true,
+        pagination: false,
+        infinite: true,
+        breakpoints: [
+          {
+            changePoint: 480,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          },
+          {
+            changePoint: 640,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          },
+          {
+            changePoint: 768,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        ]
+      });
+    });
+  </script>
+
 </head>
 <body>
 
@@ -138,11 +167,27 @@
 
 
 <div style="text-align: center">
-  <img src="static/images/fig1.png" alt="" width="600px" style="max-width: 100%; height: auto;;" />
-<img src="static/images/fig2.png" alt="" width="800px" style="max-width: 100%; height: auto;;" />
+  <img src="static/images/fig1-1.png" alt="" width="2000px" style="max-width: 100%; height: auto;;" />
+<!-- <img src="static/images/fig2.png" alt="" width="500px" style="max-width: 100%; height: auto;;" /> -->
 </div>
 
-<section>&nbsp;</section>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container" style="width: 1000px;">
+      <div id="results-carousel" class="carousel results-carousel" >
+        <div class="item item-shiba">
+          <img src="./static/images/fig3.png" width="700px">
+        </div>
+        <div class="item item-shiba">
+          <img src="./static/images/fig4.png" width="600px">
+        </div>
+        <div class="item item-shiba">
+          <img src="./static/images/fig6.png" width="800px">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">

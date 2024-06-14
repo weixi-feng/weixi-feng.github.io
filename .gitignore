@@ -1,2 +1,4 @@
 .DS_Store
 *.ipynb
+i2v_prompts.json
+t2v_prompts.*
